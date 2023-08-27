@@ -18,7 +18,7 @@
                     </div>
                 </div>
             @empty
-                <h2>Non ci sono Comics</h2>
+                <h2>There are no Comics</h2>
             @endforelse
         </div>
     </div>
