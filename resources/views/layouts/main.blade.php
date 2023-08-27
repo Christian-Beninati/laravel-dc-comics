@@ -21,7 +21,7 @@
 <body>
     {{-- Header --}}
     <header>
-        @yield('heade')
+        @include('includes.header')
     </header>
 
     {{-- Main --}}
