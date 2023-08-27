@@ -18,8 +18,17 @@ use Illuminate\Support\Facades\Route;
 // Home
 Route::get('/', [HomeController::class, "index"])->name("home");
 
-// Comics
-Route::get('/comics', [ComicController::class, "index"])->name("comics.index");
 
-// Single Comic
-Route::get('/comics/{comic}', [ComicController::class, "show"])->name("comics.show");
+
+// Comic Routes
+// Index
+Route::get('/comics', [ComicController::class, "index"])->name("comics.index");  // show comics list
+
+// Create 
+Route::get('/comics/create', [ComicController::class, "create"])->name("comics.create");  // show creation form
+
+// Show
+Route::get('/comics/{comic}', [ComicController::class, "show"])->name("comics.show");  //show comic details
+
+// Store 
+Route::post('/comics', [ComicController::class, "store"])->name("comics.store");  // create the post on the db
