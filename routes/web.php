@@ -35,3 +35,6 @@ Route::get('/comics/{comic}/edit', [ComicController::class, "edit"])->name("comi
 
 // Store 
 Route::post('/comics', [ComicController::class, "store"])->name("comics.store");  // create the post on the db
+
+// Update
+Route::put('/comics/{comic}', [ComicController::class, "update"])->name("comics.update");  // update and send to db

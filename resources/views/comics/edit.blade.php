@@ -11,7 +11,7 @@
 @section('main-content')
     <h1 class="text-center my-4">Edit Comic</h1>
     <div class="container">
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="row">
