@@ -11,7 +11,14 @@
                     <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
                     <div class="card-body">
                         <p class="card-text">{{ $comic->description }}</p>
-                        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-success">Edit</a>
+                        <div class="btn-container">
+                            <a href="{{ route('comics.edit', $comic) }}" class="btn bg-success">Edit</a>
+                            <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn bg-danger">Delete</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

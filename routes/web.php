@@ -38,3 +38,6 @@ Route::post('/comics', [ComicController::class, "store"])->name("comics.store");
 
 // Update
 Route::put('/comics/{comic}', [ComicController::class, "update"])->name("comics.update");  // update and send to db
+
+// Destroy
+Route::delete('/comics/{comic}', [ComicController::class, "destroy"])->name("comics.destroy"); // Delete
